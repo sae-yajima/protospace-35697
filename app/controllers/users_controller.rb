@@ -4,6 +4,5 @@ class UsersController < ApplicationController
         @name = @user.name
         @prototypes = @user.prototypes
 
-        
     end
 end

@@ -1,10 +1,10 @@
 class PrototypesController < ApplicationController
-   before_action :authenticate_user!,except: [:index]
+   before_action :authenticate_user!,except: [:index,:show]
    before_action :set_prototype, only: [:edit, :show]
    before_action :move_to_index, except: [:index, :show ]
 
    def index
-     query = "SELECT * FROM prototypes"
+      query = "SELECT * FROM prototypes"
       @prototypes = Prototype.find_by_sql(query)
    end
 
